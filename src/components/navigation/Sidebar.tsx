@@ -17,7 +17,9 @@ import {
   FolderTree, 
   Home, 
   Search, 
-  Settings 
+  Settings,
+  User,
+  FileText
 } from 'lucide-react';
 import { useMemoirStore } from '@/lib/store';
 
@@ -52,6 +54,22 @@ const Sidebar: React.FC = () => {
                   <Link to="/all-entries">
                     <Book className="h-4 w-4" />
                     <span>All Entries</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/about-me">
+                    <User className="h-4 w-4" />
+                    <span>About Me</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link to="/impressum">
+                    <FileText className="h-4 w-4" />
+                    <span>Impressum</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>

@@ -15,6 +15,8 @@ import CategoriesManage from "./pages/CategoriesManage";
 import TagsManage from "./pages/TagsManage";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
+import AboutMe from "./pages/AboutMe";
+import Impressum from "./pages/Impressum";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +37,8 @@ const App = () => (
             <Route path="/categories" element={<CategoriesManage />} />
             <Route path="/tags" element={<TagsManage />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/about-me" element={<AboutMe />} />
+            <Route path="/impressum" element={<Impressum />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
