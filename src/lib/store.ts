@@ -38,10 +38,12 @@ export const useMemoirStore = create<MemoirStore>()(
     (set, get) => ({
       entries: [],
       categories: [
-        { id: 'default', name: 'Uncategorized' },
-        { id: 'javascript', name: 'JavaScript' },
+        { id: 'misc', name: 'Misc' },
+        { id: 'csharp', name: 'C#' },
         { id: 'python', name: 'Python' },
-        { id: 'react', name: 'React' },
+        { id: 'blender', name: 'Blender' },
+        { id: 'unity', name: 'Unity' },
+        { id: 'meta-quest', name: 'Meta Quest' },
       ],
       addEntry: (entry) => {
         const id = crypto.randomUUID();
@@ -91,7 +93,7 @@ export const useMemoirStore = create<MemoirStore>()(
         // First update any entries in this category to the default category
         set((state) => ({
           entries: state.entries.map((e) =>
-            e.categoryId === id ? { ...e, categoryId: 'default' } : e
+            e.categoryId === id ? { ...e, categoryId: 'misc' } : e
           ),
         }));
         

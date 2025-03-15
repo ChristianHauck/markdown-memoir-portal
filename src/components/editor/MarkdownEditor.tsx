@@ -31,7 +31,7 @@ const MarkdownEditor: React.FC = () => {
   
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [categoryId, setCategoryId] = useState('default');
+  const [categoryId, setCategoryId] = useState('misc');
   const [tags, setTags] = useState<string[]>([]);
   const [activeTab, setActiveTab] = useState('write');
 
