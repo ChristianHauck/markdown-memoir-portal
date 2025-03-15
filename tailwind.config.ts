@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -89,8 +90,48 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '65ch',
+						color: 'var(--tw-prose-body)',
+						'[class~="lead"]': {
+							color: 'var(--tw-prose-lead)',
+						},
+						a: {
+							color: 'var(--tw-prose-links)',
+							textDecoration: 'underline',
+							fontWeight: '500',
+						},
+						strong: {
+							color: 'var(--tw-prose-bold)',
+							fontWeight: '600',
+						},
+						'a strong': {
+							color: 'inherit',
+						},
+						'blockquote strong': {
+							color: 'inherit',
+						},
+						'thead strong': {
+							color: 'inherit',
+						},
+						code: {
+							color: 'var(--tw-prose-code)',
+							fontWeight: '600',
+						},
+						'pre code': {
+							backgroundColor: 'transparent',
+							fontWeight: 'inherit',
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require('@tailwindcss/typography'),
+	],
 } satisfies Config;
