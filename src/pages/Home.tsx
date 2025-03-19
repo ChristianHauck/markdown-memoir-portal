@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMemoirStore } from '@/lib/store';
@@ -35,7 +34,7 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold">Extra-Cororal Memory in Markdown</h1>
+        <h1 className="text-3xl font-bold">Extra-Corporal Memory in Markdown</h1>
         <Button 
           className="flex items-center gap-2"
           onClick={() => navigate('/editor/new')}

@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     <header className="border-b bg-background flex items-center justify-between px-6 py-3 h-16">
       <div className="flex items-center space-x-4">
         <SidebarTrigger />
-        <Link to="/" className="font-bold text-xl">Extra-Cororal Memory</Link>
+        <Link to="/" className="font-bold text-xl">Extra-Corporal Memory</Link>
       </div>
       <div>
         <Button 
